@@ -10,8 +10,8 @@ try:
     # Linear Sum Assignment Problem을 한 번에 풀어줄 수 있기에 현재 문제에
     # 적용할 수 있다.
 
-    # 우선 linear_sum_assignment() function을 이용해서 optimal assignment를 찾아주는
-    # find_optimal_assignment()라는 function을 하나 새로 만들었다.
+    # 우선 linear_sum_assignment(array) function을 이용해서 optimal assignment를 찾아주는
+    # find_optimal_assignment(array)라는 function을 하나 새로 만들었다.
     # 무작위로 만들어낸 n * n cost matrix를 parameter로 받아와서
     # optimal assignment에 해당하는 row 값과 column 값을 각각 row와 col에 할당하였다.
     # 그리고 최적화된 기계와 작업의 조합을 String으로 반환하기 위해서 result라는 변수를 하나 만들었다.
@@ -25,12 +25,12 @@ try:
             result += ("machine %d: job %d \n" % (i, col[i]))
         return result
 
-    # 최적화된 기계와 작업 조합이 만들어내는 비용을 계산하기 위해서 find_total_cost()라는
+    # 최적화된 기계와 작업 조합이 만들어내는 비용을 계산하기 위해서 find_total_cost(array, r, c)라는
     # function도 하나 만들었다. 이것도 똑같은 n * n cost matrix를 parameter로
-    # 받아오지만, linear_sum_assignment()로 얻어진 row와 column의 값도 parameter로
+    # 받아오지만, linear_sum_assignment(array)로 얻어진 row와 column의 값도 parameter로
     # 받아온다. 이 두 값들은 function이 실행되기 전에 생성되야 하고 위 function 안에서
     # 만들어진 row와 col 값들은 접근이 안 되기에 n * n cost matrix를 생성한 직후에
-    # 한 번 더 직접 linear_sum_assignment()를 통해서 row와 column 값들을 새로 만들었다.
+    # 한 번 더 직접 linear_sum_assignment(array)를 통해서 row와 column 값들을 새로 만들었다.
     # 그리고 array[row, column].sum()이라는 function을 통해 최적의 기계와 작업의 조합이
     # 만들어내는 비용을 하나씩 더해서 구할 수 있고 이 값을 토대로 String으로 반환하기 위해서
     # result라는 변수를 하나 새로 만들어서 total cost를 포함시켜서 반환했다.
