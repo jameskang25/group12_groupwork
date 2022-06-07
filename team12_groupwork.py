@@ -7,8 +7,7 @@ try:
     # Linear Sum Assignment Problem이고 Hungarian Algorithm을 이용해서 해결할 수 있다.
     # 그러므로 목적 함수 최소화를 위해 자주 사용되는 module인 scipy.optimize를
     # 사용하기에 적합하다. scipy.optimize의 linear_sum_assignment()라는 function은
-    # Linear Sum Assignment Problem을 한 번에 풀어줄 수 있기에 현재 문제에
-    # 적용할 수 있다.
+    # Linear Sum Assignment Problem을 한 번에 풀어줄 수 있기에 현재 문제에 적용할 수 있다.
 
     # 우선 linear_sum_assignment(array) function을 이용해서 optimal assignment를 찾아주는
     # find_optimal_assignment(array)라는 function을 하나 새로 만들었다.
