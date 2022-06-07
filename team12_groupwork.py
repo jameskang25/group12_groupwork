@@ -38,7 +38,7 @@ try:
         result = "The total cost is %d." % total_cost
         return result
 
-
+    # Numpy 패키지의 Random 모듈을 이용해 n * n cost matrix를 만들었다.
     a = int(input("Enter a number: "))
     arr = np.random.randint(1,10, size=(a, a))
     print("data: \n", arr)
