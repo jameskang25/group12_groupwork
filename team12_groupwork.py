@@ -39,6 +39,8 @@ try:
         return result
 
     # Numpy 패키지의 Random 모듈을 이용해 n * n cost matrix를 만들었다.
+    # 여기서 n은 사용자로부터 input()으로 받아왔다.
+    # cost matrix 안의 element들은 1에서 10 사이의 정수로 설정했다.
     a = int(input("Enter a number: "))
     arr = np.random.randint(1,10, size=(a, a))
     print("data: \n", arr)
